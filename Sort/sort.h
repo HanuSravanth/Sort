@@ -9,8 +9,9 @@
 #define SORT_H_
 #include <stdint.h>
 
-void_bubble_sort_(int32_t list[], uint32_t size);
+void bubble_sort(int32_t list[], uint32_t size);
 
 
+void selection_sort(int32_t list[], uint32_t size);
 
 #endif /* SORT_H_ */

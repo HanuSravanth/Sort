@@ -25,7 +25,8 @@ void test_sort()
 {
 	int32_t input[] = {23, 14, 45, 76, 89, 23, 9, 75, 34, 55};
 	//bubble_sort(input, 10);
-	selection_sort(input, 10);
+	//selection_sort(input, 10);
+	insertion_sort(input, 10);
 	assert_sorting(input, 10);
 }
 

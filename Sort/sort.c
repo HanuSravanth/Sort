@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include "sort.h"
 
-static _swap_(int32_t *num1, int32_t *num2)
+static void _swap_(int32_t *num1, int32_t *num2)
 {
 	int32_t temp;
 	temp = *num1;
@@ -32,7 +32,6 @@ void bubble_sort(int32_t list[], uint32_t size)
 		}
 
 	}
-
 }
 
 //void selection_sort(int32_t list[], uint32_t size)

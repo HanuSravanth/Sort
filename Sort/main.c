@@ -10,12 +10,12 @@
 #include <assert.h>
 #include "sort.h"
 
-void assert_sorting(int32_t list[], int32_t size)
+void assert_sorting(int32_t list[], uint32_t size)
 {
 	int32_t pass;
 	for (pass = 0; pass < size - 1; ++pass)
 	{
-		assert (list[pass] < list[pass + 1]);
+		assert (list[pass] <= list[pass + 1]);
 		printf("Sort passed!");
 	}
 

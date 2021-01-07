@@ -73,5 +73,35 @@ void insertion_sort(int32_t list[], uint32_t size)
 	}
 }
 
+static uint32_t _partition_(int32_t list[], uint32_t start, uint32_t end)
+{
+	uint32_t up    = start, down = end;
+	uint32_t pivot = list[start];
 
+	do
+	{
+		while (list[up] <= pivot) {++up;}
+		while (list[down] > pivot) {--down;}
+
+		if (up <= down)
+		{
+			_swap_(&list[up], &list[down]);
+		}
+
+	} while(up <= down);
+	_swap_(&list[up], &list[start]);
+
+	return down;
+}
+
+void quick_sort(int32_t list[], uint32_t start, uint32_t end)
+{
+	uint32_t mid;
+	if (start < end)
+	{
+		mid = _partition_(list, start, end);
+		quick_sort(list, start, mid - 1);
+		quick_sort(list, mid + 1, end);
+	}
+}
 

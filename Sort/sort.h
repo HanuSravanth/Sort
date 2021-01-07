@@ -17,4 +17,8 @@ void selection_sort(int32_t list[], uint32_t size);
 
 void insertion_sort(int32_t list[], uint32_t size);
 
+void quick_sort(int32_t list[], uint32_t start, uint32_t end);
+
+void merge_sort(int32_t list[], uint32_t low, uint32_t high);
+
 #endif /* SORT_H_ */
